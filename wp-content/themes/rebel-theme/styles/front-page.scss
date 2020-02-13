@@ -1,0 +1,418 @@
+@import 'globals';
+
+
+
+
+//Triangle Image///////////////////////////////////////////////////////////
+
+.triangle-img{
+
+    display:none;
+
+    // @include ipad{
+    //     display:block;
+    //     width:100%;
+    //     height:100px;
+    //     background-image: url("../../images/index-images/Tri-Break.png");
+    //     margin-top: -34px;
+    // }
+
+    // @include desktop{
+    //     margin-top: -69px;
+    // }
+
+    // @include large-desktop(){
+    //     margin-top: -85px;
+    // }
+
+    // @include  largest(){
+    //     height: 115px;
+    //     margin-top: -89px;
+
+    // }
+}
+
+
+//services///////////////////////////////////////////////////////////
+
+.services{
+
+    @include tablet(){
+        margin-top: -53px;
+    }
+
+}
+
+ .main-section-header{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    @include tablet(){
+        margin-top: 87px;
+    }
+
+    @include ipad(){
+        margin-top: -18px;
+    }
+
+    h1{
+        color: #585858;
+        font-size: 2.4em;
+        // text-shadow: 3px 1px 1px #00000030;
+        padding: 10px;
+
+    }
+
+    span{
+        color: #636363;
+        font-size: 1.2em;
+        font-family:$secondary;
+        margin-top: -10px;
+    }
+}
+
+
+//ICONS///////////////////////////////////////////////////
+
+
+.icons-container{
+    flex-direction: column;
+    
+    .icons{
+        flex-direction: column;
+        width:70%;
+
+        @include desktop(){
+            flex-direction: row;
+            width: 100%;
+        }
+
+        @include large-desktop(){
+            margin-top: 3em;
+        }
+
+        @include largest(){
+            justify-content: space-between;
+            width: 64%;
+        }
+
+        .icon{
+            flex-direction:column;
+            margin-bottom: 2em;
+            // border:1px solid black;
+            // padding: 40px;
+
+            
+
+            @include desktop(){
+                margin-bottom: .5em;
+                text-align: center;
+                width: 250px;
+            }
+
+            a{
+                &:hover {
+                    animation: shake 0.5s; 
+                    animation-iteration-count: .5s; 
+                  }
+                  
+                  @keyframes shake {
+                    0% { transform: translate(1px, 1px) rotate(0deg); }
+                    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+                    20% { transform: translate(-3px, 0px) rotate(1deg); }
+                    30% { transform: translate(3px, 2px) rotate(0deg); }
+                    40% { transform: translate(1px, -1px) rotate(1deg); }
+                    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+                    60% { transform: translate(-3px, 1px) rotate(0deg); }
+                    70% { transform: translate(3px, 1px) rotate(-1deg); }
+                    80% { transform: translate(-1px, -1px) rotate(1deg); }
+                    90% { transform: translate(1px, 2px) rotate(0deg); }
+                    100% { transform: translate(1px, -2px) rotate(-1deg); }
+                  }
+
+                img{
+                    @include desktop(){
+                        width: 90%;
+                    }
+                }
+            }
+
+            span{
+                font-family:$main;
+                color:$dark-gray;
+                font-weight: 900;
+                font-size: 1.6em;
+                text-align: center;
+
+                @include desktop(){
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+        .icon-number-1{
+            span{
+                color:$dark-green;
+                font-weight: 900;
+                // color: green;
+            }
+        }
+    }
+
+
+    .services-footer{
+        color: #636363;
+        margin-top: 10px;
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: center;
+        font-size: .8em;
+        text-align:center;
+
+        @include med-desktop(){
+            margin-bottom: 6em;
+            margin-top: 2em;
+        }
+    }
+}
+
+
+//WHY REBEL/////////////////////////////////////////////
+
+.why-rebel{
+    // background-image:url("../../images/index-images/BG-V2.jpg");
+    background-attachment: fixed;
+    color:white;
+
+
+        .container{
+            flex-direction:column;
+
+
+            @include desktop(){
+                // flex-direction: row;
+                margin: 125px 0px;
+            }
+        }
+    }
+// }
+
+.col-1{
+    // font-size: 1.2em;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    @include tablet(){
+        // font-size: 1.2em;
+        padding: 0px 56px;
+    }
+
+    @include desktop(){
+        padding: 0px;
+        /* width: 54%; */
+
+        /* height: 400px; */
+    }
+
+    @include large-desktop(){
+        margin-right: 75px;
+    }
+
+    h1{
+        width: 100%;
+        font-weight: 900;
+
+    }
+    
+    span{
+    /* font-family: "Roboto", sans-serif; */
+    color: #636363;
+    /* color: #909090d6; */
+    /* text-shadow: 3px 2px 5px black; */
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+    }
+
+    p{
+        // font-size: 0.8em;
+        margin-top: 17px;
+
+        @include tablet(){
+            line-height: 19px;
+        }
+
+        @include ipad(){
+            line-height: 27px;
+        }
+
+        @include desktop(){
+            line-height: 22px;
+            width: 100%;
+        }
+        
+        @include med-desktop(){
+            line-height: 1.6em;
+            width: 72%;
+            margin-bottom: 1em;
+        }
+
+        @include xtra-large-desktop(){
+            width: 59%;
+        }
+    }
+}
+
+
+.col-2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 10px;
+    height: 109px;
+    text-align: center;
+    padding: 0px 10px;
+    max-width: 450px;
+    justify-content: space-around;
+
+    @include desktop(){
+        width: 48%;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    @include xtra-large-desktop(){
+        width: 45%;
+        // margin-top: 2em;
+    
+    }
+}
+
+//BACK 2 BASICS///////////////////////////////////////
+
+.back2basics{
+    position: relative;
+
+    @include desktop(){
+        background-image:url("../../images/index-images/B2B_BG.jpg");
+        // justify-content: flex-start;
+    }
+
+    .b2b-overlay{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: white;
+        @include desktop(){
+            display: none;
+        }
+    }
+
+    .container{
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        // padding: 0em 2em;
+
+        @include desktop(){
+            margin: 125px 0px;
+            align-items: flex-start;
+
+        }
+
+
+        @include med-desktop(){
+            flex-direction:row;
+            flex-direction: column;
+            // padding: 0em 4em;
+        }
+            
+        @include xtra-large-desktop(){
+            align-items: flex-start;
+            text-align: left;
+            // padding: 0em 7em;
+        }
+
+        @include largest(){
+            // padding: 0em 12em;
+        }
+
+        .wrapper{
+            flex-direction: column;
+
+            @include desktop(){
+                // align-items: flex-start;
+                // text-align: left;
+                width: 42%;
+
+            }
+    
+
+            h1{
+                color:$dark-gray;
+                font-weight: 900;
+            }
+            
+            span{
+                // color:$dark-green;
+                letter-spacing: 1px;
+                text-align: center;
+                font-family:$secondary;
+                // text-shadow: none;
+    
+                @include large-desktop(){
+                    font-size: 1em;
+                }
+                
+            }
+            
+            div{
+                margin: 15px 0px;
+                text-align: center;
+                font-weight: 500;
+
+            }
+    
+            a{
+                margin: 1em 0em 3em 0em;
+                text-align: center;
+                max-width: 450px;
+    
+                @include desktop(){
+                    margin: 1em 0em 0em 0em;
+                    // width: 60%;
+                }
+    
+                @include med-desktop(){
+                    width:80%;
+                }
+    
+                @include large-desktop(){
+                    width: 60%;
+                }
+    
+                @include largest(){
+                    width: 54%;
+                }
+            }
+
+        }
+        
+    }
+}
+
+
+
+//COMMITMENT//////////////////////////////////////////
+
+    
+video{
+    width:100%;
+    // height:46rem;
+
+}
+

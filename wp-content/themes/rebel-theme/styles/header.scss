@@ -1,0 +1,399 @@
+@import 'globals';
+
+
+//HEADER/////////////////////////////////////////////////////////////
+
+header{
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    flex-direction:column;
+
+
+    @include ipad{
+    background-image:url("../../images/index-images/Hero-V2.jpg");
+    background-position-x: right;
+    }
+
+
+ 
+    @include xtra-large-desktop(){
+        background-position-x: cover;
+        height: 750px;
+    }
+
+
+    .container{
+
+        @include xtra-large-desktop(){
+            height: 90%;
+        }
+
+        .hero h1{
+            font-family:$main;
+            font-weight: 900;
+        }
+
+    }  
+    
+    .icon-positioning{
+        justify-content: space-between;
+        overflow: hidden;
+
+        a{
+            width: 13%;
+            
+            img{
+                width: 100%;
+            }  
+        }
+
+
+        nav{
+
+
+        
+
+
+            .menu-main-container{
+                
+
+
+                ul{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    
+
+
+                
+
+                    li {
+                        text-align: center;
+                        // width: 60%;
+
+
+
+                        a{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            // font-size: 1rem;
+
+                        }
+                    }
+                }
+
+                li.current-menu-item a{
+                    border-bottom: 2px solid $dark-green;
+                    padding: .04rem;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+
+    .icon-positioning{
+        justify-content: space-between;
+        width: 96%;
+        margin-top: 10px;
+
+        #hamburger-icon{
+            color:white;
+            font-size:2em;
+            margin-top: -10px;
+            display: block;
+            margin-right: .3em;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            @include desktop(){
+                display: none;
+            }
+
+        }
+
+        .logo{
+            width: 40%;
+            margin-left: 1em;
+            
+            &:hover{
+                cursor: pointer;
+            }
+
+            @include xtra-large-desktop(){
+                width: 43%;
+            }
+
+        }
+
+    }
+// }
+
+
+//DESKTOP NAV/////////////////////////////////////////////////////////////////////////
+
+
+.desktop-nav{
+    display:none;
+
+    @include desktop{
+        display: block;
+        width: 100%;
+        // font-size: .65em;
+    }
+
+    @include med-desktop(){
+        width: 52%;
+        font-size: .65em;
+    }
+
+    @include large-desktop(){
+        width: 41%;
+    }
+
+    @include xtra-large-desktop(){
+        font-size: .9em;
+    }
+
+    ul{
+        justify-content: space-around;
+        height: 4em;
+
+        @include large-desktop(){
+            font-size: 1.2em;
+        }
+
+        li{
+            height: 100%;
+            display:flex;
+            align-items: center;
+
+            a{
+                padding: .3em;
+                // text-shadow: 2px 2px 3px black;
+                &:hover{
+                    color:$dark-green;
+                }
+
+            }
+
+            .active{
+                color: white;
+                border-bottom: 2px solid #587F77;
+                padding-bottom: 3px;
+            
+
+                &:hover{
+                    color:white;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+//PHONE NAV/////////////////////////////////////////////////////////////////////////
+
+
+#mobile-nav{
+    // display: none;
+    width: 100%;
+    background: #587f77ba;
+    left: -1000px;
+    z-index: 20;
+    height: 600px;
+    position: fixed;
+    // position: absolute;
+    top: 0px;
+    transition: ease .5s;
+    -webkit-transition: ease .5s;
+    -moz-transition: ease .5s;
+    -ms-transition: ease .5s;
+    -o-transition: ease .5s;  
+ 
+
+    @include desktop(){
+        display:none;
+    }
+
+    ul{
+        height: 65%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #ffffff17;
+        margin-top: 10px;
+
+        li{
+            margin-left: 10px;
+            padding: 25px;
+            font-size: 1.3em;
+        
+        
+            a{
+                color: white;
+                font-size: 1.2em;
+                // text-shadow: 3px 3px 7px black;
+            }
+        }
+    }
+
+    #close-icon{
+        position: absolute;
+        color: white;
+        // text-shadow: 5px 3px #00000066;
+        font-size: 4.5em;
+        right: 24px;
+        // text-shadow: 3px 1px 4px black;
+    }
+
+    .nav-logo{
+        width: 16%;
+        margin-top: 12px;
+        margin-left: 25px;
+    }
+    
+}
+
+
+//HERO ELEMENTS/////////////////////////////////////////////////////////////////////////
+
+.hero{
+    flex-direction:column;
+    padding: 17px;
+    text-align:center;
+
+    @include ipad{
+        margin-bottom: 57px;
+    }
+
+    @include med-desktop(){
+        padding: 60px 0px;
+    }
+
+    @include xtra-large-desktop(){
+        padding-top: 142px;
+        font-size: 1.2em;
+    }
+
+
+    .header-text{
+        margin-top: 68px;
+        font-size: 1.3em;
+        flex-direction: column;
+    }
+
+    h1,span, .call-to-action{
+        font-family: $main;
+        color:white;
+        padding: 0px 10px;
+    }
+
+    h1{
+
+        font-weight: bolder;
+        text-shadow: 0px 3px 0px #00000040;
+
+        @include desktop(){
+            font-size: 1.7em;
+        }
+
+    }
+
+    span{
+        display:none;
+        text-shadow: 0 2px 0px #00000038;
+
+        @include tablet{
+            display:block;
+        }
+    }
+}
+
+.call-to-action{
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    justify-content: space-around;
+    margin-top: 1em;
+    max-width: 815px;
+ 
+    @include desktop(){
+        margin-top:0px;
+        margin-bottom: 32px;
+        // font-size: 1.4em;
+        flex-direction: row;
+        // width:75%;
+
+        @include med-desktop(){
+            width: 75%;
+        }
+
+
+        a{
+            margin:10px;
+        }
+
+    }
+
+    @include large-desktop(){
+        width: 65%;
+    }
+
+    @include xtra-large-desktop(){
+        width: 70%;
+    }
+    
+}
+
+.green-line{
+    width: 60%;
+    height: 10px;
+    border-bottom: 4px solid $dark-green;
+    margin-top: 10px;
+}
+
+
+
+//Triangle Image///////////////////////////////////////////////////////////
+
+.triangle-img{
+
+    display:none;
+
+    @include ipad{
+        display:block;
+        width:100%;
+        height:100px;
+        background-image: url("../../images/index-images/Tri-Break.png");
+        margin-top: -34px;
+    }
+
+    @include desktop{
+        margin-top: -69px;
+    }
+
+    @include large-desktop(){
+        margin-top: -85px;
+    }
+
+    @include  largest(){
+        height: 115px;
+        margin-top: -89px;
+
+    }
+}

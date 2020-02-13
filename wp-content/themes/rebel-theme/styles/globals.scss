@@ -1,0 +1,250 @@
+// padding-top
+
+//colors
+$dark-gray:#585858;
+$light-gray:#636363;
+$light-green:#A8BAB5;
+$dark-green:#587F77;
+
+
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Roboto:400,500,700,900&display=swap');
+
+$main: 'Montserrat', sans-serif;
+// $main-bold:
+$secondary: 'Roboto', sans-serif;
+
+//media break points
+$small-iphone:320px;
+$tablet: 550px;
+$ipad: 768px;
+$desktop: 802px;
+$med-desktop:920px;
+$large-desktop:1150px;
+$text-bp1:1290px;
+$xtra-large-desktop:1400px;
+$text-bp2:1560px;
+$largest:1700px;
+
+@mixin small-iphone{
+    @media(max-width:#{$small-iphone}) {
+        @content;
+    }
+}
+
+@mixin ipad{
+    @media(min-width:#{$ipad}) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media(min-width:#{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media(min-width:#{$desktop}){
+        @content;
+    }
+}
+
+@mixin med-desktop{
+    @media(min-width:#{$med-desktop}){
+        @content;
+    }
+}
+
+@mixin large-desktop{
+    @media(min-width:#{$large-desktop}){
+        @content;
+    }
+}
+
+@mixin text-bp1{
+    @media(min-width:#{$text-bp1}){
+        @content;
+    }
+}
+
+@mixin xtra-large-desktop{
+    @media(min-width:#{$xtra-large-desktop}){
+        @content;
+    }
+}
+
+@mixin text-bp2{
+    @media(min-width:#{$text-bp2}){
+        @content;
+    }
+}
+
+@mixin largest{
+    @media(min-width:#{$largest}){
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+//GLOBAL STYLING//////////////////////////////////////////////////////{
+    
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:$main;
+    overflow-x: hidden;
+    letter-spacing: 1px;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width:2100px;
+    width: 100%;
+    overflow-y: scroll; 
+}
+
+h1, h2, span, a, button{
+    text-transform:uppercase;
+}
+
+
+img{
+    width: 100%;
+}
+
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background-img-settings{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+p{
+    font-family:$secondary;
+}
+
+
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.button{
+    border: 2px solid white;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 30px;
+    // box-shadow: 3px 3px 4px 0px #000000bd;
+    // text-shadow: 1px 1px 0px black;
+    font-family: $secondary;
+
+    
+    // @include tablet(){
+    //     width: 75%;
+    // }
+
+    // @include ipad(){
+    //     width: 60%;
+    // }
+
+    // @include desktop(){
+    //     width:100%;
+    // }
+
+}
+
+.white-button{
+    &:hover{
+        background-color:#ffffffc4;
+        color:$dark-gray;
+        transition: ease-in-out .2s;
+        -webkit-transition: ease-in-out .2s;
+        -moz-transition: ease-in-out .2s;
+        -ms-transition: ease-in-out .2s;
+        -o-transition: ease-in-out .2s;
+    }
+}
+
+.green-button{
+    background-image:linear-gradient(to bottom, $dark-green, $light-green);
+    border:none;
+
+    
+    &:hover{
+        background-image:linear-gradient(to bottom, $light-green, $light-green);
+        transition:ease-in-out .5s;
+        -webkit-transition:ease-in-out .5s;
+        -moz-transition:ease-in-out .5s;
+        -ms-transition:ease-in-out .5s;
+        -o-transition:ease-in-out .5s;
+    }
+
+}
+
+
+
+//CONTAINERS///////////////////////////////////////////////////////////////////////////
+.container{
+    width:84%;
+    min-width: 300px;
+    padding: 1em;
+    // border:1px solid red;
+    overflow: hidden;
+
+    // @include desktop(){
+    //     width: 93%;
+
+    // }
+
+    // @include large-desktop(){
+    //     width: 84%;
+    // }
+
+    // @include xtra-large-desktop(){
+    //     width: 80%;
+    // }
+
+    // @include largest(){
+    //     width: 77%;
+    // }
+}
+
+.row-container{
+    margin: 50px 0px;
+
+    // @include large-desktop(){
+    //     margin: 95px 0px;
+    // }
+}
