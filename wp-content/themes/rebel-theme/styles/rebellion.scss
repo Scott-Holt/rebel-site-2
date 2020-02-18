@@ -1,2 +1,384 @@
 @import 'globals';
 
+$bio-top:1300px;
+
+
+@mixin top-content {
+    @media(min-width:#{$bio-top}){
+        @content;
+    }
+}
+
+
+
+////GLOBAL STYLES////////////////////////////////////////////////////////
+
+// .container{
+//     flex-direction:column;
+//     margin-bottom: 3em;
+    
+
+
+//     @include desktop(){
+//         width: 70%;
+//     }
+
+//     @media(min-width:1282px) {
+//         width: 63%;
+//     }
+
+//     @include top-content(){
+//         width: 61%;
+//     }
+
+//     @include xtra-large-desktop(){
+//         width: 1110px;
+//     }
+
+//     @include largest(){
+//         width: 1260px;
+//     }
+// }
+
+/////////header////////////////////////////////////////////////////////////
+
+header{
+    // background-image:url("../../images/the-rebellion-images/BG.jpg");
+
+    .overlay-gradient{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
+        flex-direction:column;
+        
+        @include xtra-large-desktop(){
+            height: 100%;
+        }
+    }
+
+    .hero{
+        @include desktop(){
+            width:100%;
+        }
+    }
+
+    .call-to-action{
+        @include largest(){
+            // width: 57%;
+        }
+    }
+
+    .icon-positioning{
+        overflow-y:hidden;
+    }
+}
+
+
+//////////TRIANGLE IMAGE///////////////////////////////////////////////////////////
+
+.triangle-img{
+    background-image: url("../../images/index-images/Tri-Break.png");
+}
+
+
+
+
+//////////WHO WE ARE///////////////////////////////////////////////////////////
+
+main{
+    flex-direction: column;
+
+    @include large-desktop(){
+        // font-size: .8em;
+        // font-size: .75em;
+        font-size: 1em;
+    }
+
+
+    @include xtra-large-desktop(){
+        font-size: 1.3em;
+    }
+
+    @include largest(){
+        font-size: 1.5em;
+    }
+
+    .container{
+        flex-direction:column;
+        margin-bottom: 3em;
+        
+    
+    
+        @include desktop(){
+            width: 70%;
+        }
+    
+        @media(min-width:1282px) {
+            width: 63%;
+        }
+    
+        @include top-content(){
+            width: 61%;
+        }
+    
+        @include xtra-large-desktop(){
+            width: 1110px;
+        }
+    
+        @include largest(){
+            width: 1260px;
+        }
+    }
+
+
+
+
+    #main-section-header{
+        margin-top:1em;
+
+        // @include large-desktop(){
+        //     margin-bottom: 4em;
+        // }
+
+        span{
+
+            @include large-desktop(){
+            width: 80%;
+            }
+
+            @include xtra-large-desktop(){
+                width: 60%;
+            }
+        }
+
+        .green-line{
+            width: 33%;
+        }
+
+        p{
+            margin-top:2em;
+            color:$light-gray;
+
+            @include large-desktop(){
+                width: 60%;
+            }
+        }
+    }
+
+
+    .bio-section{
+        color:$light-gray;
+        margin-top: 3em;
+  
+        @include desktop(){
+
+        }
+
+        .bio-top{
+            flex-direction:column;
+
+            img{
+                @include ipad(){
+                    width:70%;
+                }
+
+                @include large-desktop(){
+                    width:100%;
+                }
+            }
+
+            @include large-desktop(){
+                flex-direction: row;
+                // height: 377px;
+                align-items: flex-end;
+
+                @include xtra-large-desktop(){
+                    height: 478px;
+                }
+            }
+
+
+            .top-content{
+                overflow-y: hidden;
+                margin-top: 3em;
+
+                @include desktop(){
+                    width: 100%;
+                }
+
+                @include large-desktop(){
+                    margin-bottom: 1%;
+                    margin-top:0em;
+                    height: 65%;
+
+                @include top-content(){
+                    height: 70%;
+                }
+
+
+                @include xtra-large-desktop(){
+                    height: 68%;
+                    // height: 81%;
+                }
+
+                @include largest(){
+                    height: 76%;
+                }
+
+
+                }
+
+                h2{
+                    color:$dark-gray;
+                    font-size: 2em;
+                    font-weight: 900;
+                }
+
+                span{
+                    color:$dark-green;
+                    font-size: 1.5em;
+                }
+
+                p{
+                    margin-top: .5em;
+                }
+            }
+
+            img{
+                margin-right: 2em;
+
+            }
+        }
+
+        .bio-bottom{
+            display:none;
+
+            @include desktop(){
+                display:block;
+                margin-bottom: 8em;
+            }
+        }
+    }
+}
+
+
+
+.kare-container{
+    width:100%;
+    background-color: #ECECEC;
+
+    .container{
+
+        .bio-top{
+
+            margin-top: 4em;
+            
+            @include large-desktop(){
+                margin-top: 5em;
+            }
+
+            img{
+                @include large-desktop(){
+                    order: 1;
+                    padding-left: 2em;
+                    margin-bottom: 2em;
+                }
+
+                @media(min-width:1190px){
+                    margin-bottom:0;
+                }
+
+                @media(min-width:1282px){
+                    margin-bottom: 2em;
+                }
+
+                @media(min-width:1362px){
+                    margin-bottom: 0em;
+                }
+
+                @include xtra-large-desktop(){
+                    margin-bottom:2em;
+                }
+            }
+
+            .top-content{
+                @include large-desktop(){
+                    h2{
+                        margin-top: 2em;
+                    }
+                }
+
+                @include xtra-large-desktop(){
+                    margin-bottom: 5%;
+                    height: 81%;
+                }
+
+                @include largest(){
+                    height: 91%;
+                }
+            }
+
+            img{
+                @include largest(){
+                    width: 95%;
+                }
+            }
+        }
+    }
+}
+
+
+//////WHY WE DO IT/////////////////////////////////////////////////////////////@include
+
+
+
+.why{
+    background-image:url("../../images/the-rebellion-images/BG-1Row.jpg");
+    color:white;
+    background-attachment: fixed;
+
+    .container{
+        flex-direction:column;
+        margin-bottom: 3em;
+        
+
+
+        @include desktop(){
+            width: 70%;
+        }
+
+        @media(min-width:1282px) {
+            width: 63%;
+        }
+
+        @include top-content(){
+            width: 61%;
+        }
+
+        @include xtra-large-desktop(){
+            width: 1110px;
+        }
+
+        @include largest(){
+            width: 1260px;
+        }
+    }
+    
+    .why-content{
+        padding: 4em 0em;
+        text-align: center;
+        flex-direction: column;
+
+        @include large-desktop(){
+            padding: 8em 0em;
+        }
+
+        h1{
+            font-size: 2.4em;
+        }
+
+        span{
+            font-family: $secondary;
+            font-size: 1.3em;
+        }
+    }
+}

@@ -20,25 +20,35 @@
                 $toppic = get_field('front_page_hero_image', 'options');
             }
             elseif ( is_page('The Rebellion') ) {
-                $toppic = get_field('the_rebellion_hero_image', 'options');
+                $toppic = get_field('the_rebellion_hero_image', 'options'); 
             }
             elseif ( is_page('services') ) {
-                $toppic = get_field('the_rebellion_hero_image', 'options');
+                $toppic = get_field('services_hero_image', 'options');
             }
             elseif ( is_page('news') ) {
                 $toppic = get_field('services_hero_image', 'options');
             }
             elseif ( is_page('contact') ) {
-                $toppic = get_field('default_hero_image', 'options');
+                $toppic = get_field('contact_hero_image', 'options');
             }            
             else {
-                $toppic = get_field('services_hero_image', 'options');
+                $toppic = get_field('default_hero_image', 'options');
             } 
         
         ?>
         <header id="home" class="flex" style="background-image:url('<?=$toppic['url'];?>')">
 
+        <!-- <?php   
+                if ( is_page('The Rebellion') ) {
+                    $ol_gr =  "overlay-gradient flex";
+                } 
+                else {
+                    $ol_gr = "foo";
+                }
+                
+        ?>
 
+        <div class="<?=$ol_gr?>"> -->
         
 
 

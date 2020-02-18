@@ -1,8 +1,27 @@
 
 <!--FORM--------------------------------------------------------------------------------->
-<?php
-    $form_img = get_field('email_form_background_image', 'options');
+<?php 
+            if ( is_page('Home') ) {
+                $form_img = get_field('home_form_background_image', 'options');
+            }
+            elseif ( is_page('The Rebellion') ) {
+                $form_img = get_field('the_rebellion_form_image', 'options');
+            }
+            elseif ( is_page('services') ) {
+                $form_img = get_field('services_form_image', 'options');
+            }
+            elseif ( is_page('news') ) {
+                $form_img = get_field('news_form_image', 'options');
+            }
+            elseif ( is_page('contact') ) {
+                $form_img = get_field('contact_form_image', 'options');
+            }            
+            else {
+                $form_img = get_field('email_form_background_image', 'options');
+            } 
+        
 ?>
+        
 
 <div style="background-image:url('<?=$form_img['url'];?>');" class="form-section flex background-img-settings">
     <div class="form-overlay"></div>

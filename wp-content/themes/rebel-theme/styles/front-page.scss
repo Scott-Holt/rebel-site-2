@@ -82,9 +82,10 @@
     
     .icons{
         flex-direction: column;
-        width:70%;
+        // width:70%;
+        width: 100%;
 
-        @include desktop(){
+        @include med-desktop(){
             flex-direction: row;
             width: 100%;
         }
@@ -95,7 +96,7 @@
 
         @include largest(){
             justify-content: space-between;
-            width: 64%;
+            // width: 64%;
         }
 
         .icon{
