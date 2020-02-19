@@ -1,1 +1,185 @@
 @import 'globals';
+
+/////////MAIN///////////////////////////////////////
+
+main{
+    .container{
+        flex-direction: column;
+
+        // @include desktop(){
+        //     width:80%;
+        // }
+
+        .main-section-header{
+
+            margin-bottom: 2rem;
+
+            @include xtra-large-desktop(){
+                font-size: 1.2em;
+                margin-bottom: 3em;
+            }
+        }
+        
+        .contact-box{
+            display: none;
+
+
+            @include med-desktop(){
+                display:block;
+                width:100%;
+                height: 243px;
+                border: 1px solid $dark-gray;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                line-height: 1.9em;
+            }
+
+            @include xtra-large-desktop(){
+                height: 285px;
+                font-size: 1.2em;
+
+            }
+
+            .text-wrapper{
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                justify-content: flex-start;
+                color:$dark-gray;
+
+
+                .call-us-mobile{
+                    margin-top: 1em;
+                    // color:$dark-gray;
+
+                    @include desktop(){
+                        display:none;
+                    }
+                }
+
+                .call-us{
+                    margin-top:1em;
+                    display:none;
+                    // color:$dark-gray;
+
+                    @include desktop(){
+                        display:block;
+                    }
+                }
+
+                .email-us{
+                    // color:$dark-gray;
+                }
+
+                a{
+                    color:$dark-gray;
+                    text-decoration: underline;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .contact-form{
+            background-image: url("../../images/contact/Contact-Form_IMG.jpg");
+            height: 600px;
+            width: 100%;
+            flex-direction:column;
+            color:white;
+
+
+            @include med-desktop(){
+                margin-top: -4em;
+                width:80%;
+            }
+
+            @include xtra-large-desktop(){
+                height: 788px;
+            }
+
+            .validate{
+                color: #bf1313;
+                font-size: 1.3em;
+                display:none;
+                transition:ease-in-out .4s;     
+                -webkit-transition:ease-in-out .4s;
+                -moz-transition:ease-in-out .4s;
+                -ms-transition:ease-in-out .4s;
+                -o-transition:ease-in-out .4s;
+            }
+
+
+            form{
+                margin: 0em 1em;
+                width: 80%;
+
+                @include tablet(){
+                    width:80%;
+                }
+
+                @include xtra-large-desktop(){
+                    width: 60%;
+                }
+
+                input{
+
+                    @include xtra-large-desktop(){
+                        height: 4em;
+                    }
+                }
+
+
+                .message{
+                    @include xtra-large-desktop(){
+                        height: 17em;
+                    }
+                }
+
+                .submit{
+                    height: 2em;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+///////////////////MAP SECTION////////////////////////////////////
+
+.map-section{
+    color:$dark-gray;
+    margin-top:2em;
+    flex-direction: column;
+    margin-bottom: 3em;
+
+
+    // @include desktop(){
+    //     margin: 2em 0em;
+    // }
+
+    .container{
+        flex-direction: column;
+
+        h1,span{
+            text-align: center;
+        }
+
+        h1{
+            font-size: 3em;
+        }
+
+        span{
+            margin-bottom: 2em;
+            font-size: 2em;
+        }
+
+    }
+
+}
+

@@ -34,6 +34,9 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+//adds theme support to allow post thumbnails to show in wp-admin
+add_theme_support( 'post-thumbnails' );
+
 
 /**
  * Plugin name: WP Trac #42573: Fix for theme template file caching.

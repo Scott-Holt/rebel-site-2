@@ -30,7 +30,11 @@
             }
             elseif ( is_page('contact') ) {
                 $toppic = get_field('contact_hero_image', 'options');
-            }            
+            }    
+            elseif ( is_page('Single Post') ) {
+                    $toppic = get_the_post_thumbnail();
+            }
+                   
             else {
                 $toppic = get_field('default_hero_image', 'options');
             } 
