@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Roboto:400,500,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Roboto:400,500,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Roboto:400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Roboto:400,500,700,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -572,6 +573,12 @@ main {
           font-size: 1.5em; }
         main .bio-section .bio-top .top-content p {
           margin-top: .5em; }
+          @media (min-width: 1400px) {
+            main .bio-section .bio-top .top-content p {
+              font-size: 1.3rem; } }
+          @media (min-width: 1700px) {
+            main .bio-section .bio-top .top-content p {
+              font-size: 1.5rem; } }
       main .bio-section .bio-top img {
         margin-right: 2em; }
     main .bio-section .bio-bottom {
@@ -580,6 +587,12 @@ main {
         main .bio-section .bio-bottom {
           display: block;
           margin-bottom: 8em; } }
+      @media (min-width: 1400px) {
+        main .bio-section .bio-bottom {
+          font-size: 1.3rem; } }
+      @media (min-width: 1700px) {
+        main .bio-section .bio-bottom {
+          font-size: 1.5rem; } }
 
 .kare-container {
   width: 100%;
@@ -616,6 +629,12 @@ main {
     @media (min-width: 1700px) {
       .kare-container .container .bio-top .top-content {
         height: 91%; } }
+    @media (min-width: 1400px) {
+      .kare-container .container .bio-top .top-content {
+        font-size: 1.3rem; } }
+    @media (min-width: 1700px) {
+      .kare-container .container .bio-top .top-content {
+        font-size: 1.5rem; } }
     @media (min-width: 1700px) {
       .kare-container .container .bio-top img {
         width: 95%; } }
@@ -860,6 +879,229 @@ main .container {
     .map-section .container span {
       margin-bottom: 2em;
       font-size: 2em; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  letter-spacing: 1px; }
+
+html {
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth; }
+
+body {
+  max-width: 2100px;
+  width: 100%;
+  overflow-y: scroll; }
+
+h1, h2, span, a, button {
+  text-transform: uppercase; }
+
+h1 {
+  font-weight: 900; }
+
+img {
+  width: 100%; }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.background-img-settings {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+p {
+  font-family: "Roboto", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.button {
+  border: 2px solid white;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif; }
+  @media (min-width: 550px) {
+    .button {
+      width: 75%; } }
+  @media (min-width: 768px) {
+    .button {
+      width: 60%; } }
+  @media (min-width: 802px) {
+    .button {
+      width: 100%; } }
+
+.white-button:hover {
+  background-color: #ffffffc4;
+  color: #585858;
+  transition: ease-in-out .2s;
+  -webkit-transition: ease-in-out .2s;
+  -moz-transition: ease-in-out .2s;
+  -ms-transition: ease-in-out .2s;
+  -o-transition: ease-in-out .2s; }
+
+.green-button {
+  background-image: linear-gradient(to bottom, #587F77, #A8BAB5);
+  border: none; }
+  .green-button:hover {
+    background-image: linear-gradient(to bottom, #A8BAB5, #A8BAB5);
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s; }
+
+.container {
+  width: 84%;
+  min-width: 300px;
+  padding: 1em;
+  overflow: hidden; }
+  @media (min-width: 802px) {
+    .container {
+      width: 93%; } }
+  @media (min-width: 1150px) {
+    .container {
+      width: 84%; } }
+  @media (min-width: 1400px) {
+    .container {
+      width: 80%; } }
+  @media (min-width: 1700px) {
+    .container {
+      width: 77%; } }
+
+.row-container {
+  margin: 50px 0px; }
+  @media (min-width: 1150px) {
+    .row-container {
+      margin: 95px 0px; } }
+
+.post-container {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around; }
+  @media (min-width: 1150px) {
+    .post-container {
+      flex-direction: row;
+      align-items: flex-start; } }
+  .post-container .sidebar {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0px 0px 13px 2px #0000000d;
+    text-align: left; }
+    @media (min-width: 768px) {
+      .post-container .sidebar {
+        width: 75%;
+        margin-bottom: 2rem; } }
+    @media (min-width: 802px) {
+      .post-container .sidebar {
+        margin-right: 2rem; } }
+    @media (min-width: 1150px) {
+      .post-container .sidebar {
+        width: 28%;
+        height: 80vh;
+        margin-top: 4rem; } }
+    .post-container .sidebar #search-2 h4 {
+      display: none; }
+    .post-container .sidebar h4 {
+      color: #587F77;
+      margin-top: 1rem; }
+    .post-container .sidebar a {
+      color: #585858;
+      font-size: .8rem;
+      text-transform: none; }
+      .post-container .sidebar a:hover {
+        color: #587F77;
+        transition: ease-in-out .2s; }
+    .post-container .sidebar .search-form .search-submit {
+      background-color: inherit;
+      border: none; }
+    .post-container .sidebar .screen-reader-text {
+      border: 0;
+      clip: rect(1px 1px 1px 1px);
+      /* IE6, IE7 */
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; }
+  .post-container form input {
+    width: 90%;
+    padding-left: 1rem;
+    margin-bottom: 0; }
+  .post-container form i {
+    font-size: 1rem;
+    color: #587F77; }
+  .post-container .post-container-inner {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    @media (min-width: 802px) {
+      .post-container .post-container-inner {
+        width: 75%; } }
+    @media (min-width: 1150px) {
+      .post-container .post-container-inner {
+        justify-content: center;
+        margin-top: 4rem;
+        margin-bottom: 6rem; } }
+    .post-container .post-container-inner a .blog-card {
+      border: 1px solid #58585857;
+      height: 28rem;
+      box-shadow: 0px 0px 13px 2px #0000002e;
+      margin: .5rem; }
+      @media (min-width: 550px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 27rem; } }
+      @media (min-width: 802px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 24rem; } }
+      @media (min-width: 1150px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 25rem; } }
+      @media (min-width: 1290px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 27rem; } }
+      @media (min-width: 1700px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 36rem;
+          height: 26rem; } }
+      @media (min-width: 1400px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 19rem; } }
+      @media (min-width: 1900px) {
+        .post-container .post-container-inner a .blog-card {
+          width: 26rem; } }
+      .post-container .post-container-inner a .blog-card .card-img {
+        height: 13rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      .post-container .post-container-inner a .blog-card .blog-text {
+        padding: 3rem;
+        font-size: .6rem; }
+        .post-container .post-container-inner a .blog-card .blog-text h1 {
+          margin-bottom: .5rem;
+          color: #587F77;
+          font-weight: 500; }
+        .post-container .post-container-inner a .blog-card .blog-text p {
+          color: #585858; }
 
 * {
   padding: 0;

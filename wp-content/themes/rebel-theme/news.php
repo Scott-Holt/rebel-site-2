@@ -1,8 +1,1 @@
-
-
-<?php get_header(); ?>
-
-
-
-
-<?php get_footer();?>
+<!---this will be re-directed to home.php -->

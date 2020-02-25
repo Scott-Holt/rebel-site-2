@@ -240,6 +240,14 @@ main{
 
                 p{
                     margin-top: .5em;
+
+                    @include xtra-large-desktop(){
+                        font-size: 1.3rem;
+                    }
+
+                    @include largest(){
+                        font-size: 1.5rem;
+                    }
                 }
             }
 
@@ -255,6 +263,14 @@ main{
             @include desktop(){
                 display:block;
                 margin-bottom: 8em;
+            }
+
+            @include xtra-large-desktop(){
+                font-size: 1.3rem;
+            }
+
+            @include largest(){
+                font-size: 1.5rem;
             }
         }
     }
@@ -314,6 +330,14 @@ main{
 
                 @include largest(){
                     height: 91%;
+                }
+
+                @include xtra-large-desktop(){
+                    font-size: 1.3rem;
+                }
+
+                @include largest(){
+                    font-size: 1.5rem;
                 }
             }
 

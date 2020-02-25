@@ -67,3 +67,23 @@ add_action( 'current_screen', 'wp_42573_fix_template_caching' );
 
 
 
+
+
+//////this adds widget option in sidebar and creates new side bar. This one i renamed to 'blog post sidebar'
+
+if (function_exists('register_sidebar')) {
+
+	register_sidebar(array(
+			'name' => 'Blog Post Siderbar',
+			'id'   => 'blog_post_sidebar',
+			'description'   => 'Sidebar for Archived posts',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>'
+	));
+
+}
+
+
+

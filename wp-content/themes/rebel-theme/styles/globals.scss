@@ -26,6 +26,7 @@ $text-bp1:1290px;
 $xtra-large-desktop:1400px;
 $text-bp2:1560px;
 $largest:1700px;
+$blah: 1900px;
 
 @mixin small-iphone{
     @media(max-width:#{$small-iphone}) {
@@ -88,7 +89,11 @@ $largest:1700px;
 }
 
 
-
+@mixin blah{
+    @media(min-width:#{$blah}){
+        @content;
+    }
+}
 
 
 

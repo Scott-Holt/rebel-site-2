@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/6a6d1824ee.js" crossorigin="anonymous"></script>
         <?php wp_head();?>
     </head>
     
@@ -25,16 +26,12 @@
             elseif ( is_page('services') ) {
                 $toppic = get_field('services_hero_image', 'options');
             }
-            elseif ( is_page('news') ) {
-                $toppic = get_field('services_hero_image', 'options');
+            elseif ( is_home() ) {
+                $toppic = get_field('news_hero_image', 'options');
             }
             elseif ( is_page('contact') ) {
                 $toppic = get_field('contact_hero_image', 'options');
             }    
-            elseif ( is_page('Single Post') ) {
-                    $toppic = get_the_post_thumbnail();
-            }
-                   
             else {
                 $toppic = get_field('default_hero_image', 'options');
             } 
@@ -120,7 +117,7 @@
                             $hero_header = get_field('services_page_hero_header', 'options');
                             $hero_sub_header = get_field('services_page_hero_sub_header', 'options');
                         }
-                        elseif ( is_page('news') ) {
+                        elseif ( is_home() ) {
                             $hero_header = get_field('news_page_hero_header', 'options');
                             $hero_sub_header = get_field('news_page_hero_sub_header', 'options');
                         }
@@ -163,7 +160,7 @@
                             $hero_button2_text = get_field('services_hero_button_two_text','options');
                             $hero_button2_lnk = get_field('services_hero_button_two_link','options');
                         }
-                        elseif ( is_page('news') ) {
+                        elseif ( is_home() ) {
                             $hero_button1_text = get_field('news_hero_button_one_text', 'options');
                             $hero_button1_lnk = get_field('news_hero_button_one_link', 'options');
                             $hero_button2_text = get_field('news_hero_button_two_text','options');

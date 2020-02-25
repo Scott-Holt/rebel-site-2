@@ -1,0 +1,198 @@
+@import 'globals';
+
+.post-container{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    //new styles with side-bar
+    justify-content: space-around;
+
+    @include large-desktop(){
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .sidebar{
+        margin-top: 1rem;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: 0px 0px 13px 2px #0000000d;
+        text-align: left;
+
+        @include ipad(){
+            width: 75%;
+            margin-bottom: 2rem;
+        }
+
+        @include desktop(){
+            // margin-top: 9rem;
+            // width: 28%;
+            // height: 80vh;
+            margin-right: 2rem;
+        }
+
+        @include large-desktop(){
+            width: 28%;
+            height: 80vh;
+            margin-top:4rem;
+        }
+
+        
+        #search-2{
+            h4{
+                display: none;
+            }
+            
+        }
+
+        //this is for Reacent and Archive Headers and the post links
+
+        h4{
+            color: $dark-green;
+            margin-top: 1rem;
+        }
+
+        a{
+            color: $dark-gray;
+            font-size: .8rem;
+            text-transform: none;
+
+            &:hover{
+                color: $dark-green;
+                transition: ease-in-out .2s;
+            }
+        }
+
+
+        .search-form .search-submit {
+            background-color: inherit;
+            border: none;
+        }
+
+        //this is for the hidden text that says 'search' that i hid to allow screen readers to still view them.
+
+        .screen-reader-text{
+            border: 0;
+            clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+
+        }
+    }
+
+    form{
+        input{
+            width: 90%;
+            padding-left: 1rem;
+            margin-bottom: 0;
+        }
+
+        i{
+            font-size: 1rem;
+            color: $dark-green;
+        }
+    }
+
+    .post-container-inner{
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        // justify-content: flex-start;
+        flex-wrap: wrap;
+
+        @include desktop(){
+            width: 75%;
+        }
+
+        @include large-desktop(){
+            justify-content: center;
+            margin-top:4rem;
+            margin-bottom: 6rem;
+        }
+
+        a{
+            @include tablet(){
+                
+            }
+
+            .blog-card{
+                border: 1px solid #58585857;
+                // width: 27rem;
+                height: 28rem;
+                box-shadow: 0px 0px 13px 2px #0000002e;
+                margin: .5rem;
+
+
+                ///use this when cards wrap to bigger screens
+                // margin-bottom: 1rem;
+                // margin-right: .8rem;
+
+                @include tablet(){
+                    width: 27rem;
+                    // height: 31rem;
+                }
+
+                @include desktop(){
+                    width: 24rem;
+                }
+
+                @include large-desktop(){
+                    width: 25rem;
+                }
+
+                @include text-bp1(){
+                    width: 27rem;
+                }
+
+                @include largest(){
+                    width: 36rem;
+                    height: 26rem;
+                }
+
+                @include xtra-large-desktop(){
+                    width: 19rem;
+                }
+
+                @include blah(){
+                    width: 26rem;
+                }
+
+                .card-img{
+                    height: 13rem;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                .blog-text{
+                    padding: 3rem;
+                    font-size: .6rem;
+
+                    h1{
+                        margin-bottom: .5rem;
+                        color: $dark-green;
+                        font-weight: 500;
+                    }
+
+                    p{
+                        color: $dark-gray;
+                    }
+
+                    //at desktop make font bigger
+                }
+                
+            }
+        }
+
+    }
+
+}
