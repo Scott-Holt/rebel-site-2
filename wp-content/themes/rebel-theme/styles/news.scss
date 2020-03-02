@@ -19,7 +19,7 @@
         margin-top: 1rem;
         width: 100%;
         padding: 2rem;
-        box-shadow: 0px 0px 13px 2px #0000000d;
+        box-shadow: 0px 0px 13px 2px #0000002e;
         text-align: left;
 
         @include ipad(){
@@ -53,6 +53,10 @@
         h4{
             color: $dark-green;
             margin-top: 1rem;
+        }
+
+        li{
+            border-bottom: 1px solid #00000014;
         }
 
         a{
@@ -125,11 +129,15 @@
             }
 
             .blog-card{
-                border: 1px solid #58585857;
-                // width: 27rem;
+                border: 1px solid #7b7a7a47;
                 height: 28rem;
-                box-shadow: 0px 0px 13px 2px #0000002e;
+                box-shadow: 1px 2px 5px 0px #0000002e;
                 margin: .5rem;
+
+                &:hover{
+                    box-shadow: none;
+                    transition: .6s;
+                }
 
 
                 ///use this when cards wrap to bigger screens
@@ -175,12 +183,13 @@
 
                 .blog-text{
                     padding: 3rem;
-                    font-size: .6rem;
+                    font-size: .7rem;
 
                     h1{
                         margin-bottom: .5rem;
                         color: $dark-green;
                         font-weight: 500;
+                        border-bottom: 1px solid;
                     }
 
                     p{
@@ -189,6 +198,15 @@
 
                     //at desktop make font bigger
                 }
+
+                .blog-button{
+                    width: 56%;
+                    font-size: .4rem;
+                    text-align: center;
+                    transform: translate-x(10%);
+                    transform: translateX(40%);
+
+                }
                 
             }
         }
@@ -196,3 +214,61 @@
     }
 
 }
+
+.pag-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 64%;
+
+        .pag-btn{
+            width: 32%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image:linear-gradient(to bottom, $dark-gray, $light-gray);
+            margin: 0rem 1rem;
+        }
+
+        a{
+            color: white;
+            font-size: .8rem;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            &:hover{
+                color: $dark-green;
+                transition: ease-in-out .3s;
+            }
+        }
+        
+    }
+}
+
+
+.no-results{
+
+    h2{
+        color: $dark-green;
+        margin-bottom: 1.5rem;
+    }
+    a{
+        color: blue;
+        text-decoration: underline;
+
+        &:hover{
+            color: $dark-green;
+            transition: ease-in-out .3s;
+        }
+    }
+}
+
+

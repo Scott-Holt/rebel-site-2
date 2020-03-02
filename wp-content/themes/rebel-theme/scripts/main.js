@@ -3,6 +3,10 @@ const mobileNav = document.getElementById('mobile-nav');
 const overlay = document.getElementById('overlay');
 const closeIcon = document.getElementById('close-icon');
 
+
+console.log(prvBtn);
+console.log(nxtBtn);
+
 function openNav() {
     mobileNav.style = 'left: 0px';
     overlay.style.display = 'block';
@@ -15,3 +19,6 @@ function closeNav() {
 
 hamIcon.addEventListener('click', openNav);
 closeIcon.addEventListener('click', closeNav);
+
+
+

@@ -23,9 +23,12 @@
         <!-- if current page is something, then display certain hero image. If no image assinged, than display
         default image-->
         
-        <?php
-        $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-            
+        <?php 
+          if(has_post_thumbnail()){
+              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+          } else {
+              $url = get_field('default_post_thumbnail_image', 'options')['url'];
+          }
         ?>  
       
         <header id="home" class="flex single-post-header" style="background-image:url(<?=$url?>)">

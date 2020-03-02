@@ -31,7 +31,10 @@
             }
             elseif ( is_page('contact') ) {
                 $toppic = get_field('contact_hero_image', 'options');
-            }    
+            }   
+            elseif( is_search() ){
+                $toppic = get_field('search_background_image', 'options');
+            } 
             else {
                 $toppic = get_field('default_hero_image', 'options');
             } 
@@ -124,7 +127,11 @@
                         elseif ( is_page('contact') ) {
                             $hero_header = get_field('contact_page_hero_header', 'options');
                             $hero_sub_header = get_field('contact_page_hero_sub_header', 'options');
-                        }            
+                        }  
+                        elseif ( is_search() ) {
+                            $hero_header = get_field('search_header', 'options');
+                            $hero_sub_header = get_field('contact_page_hero_sub_header', 'options');
+                        }          
                         else {
                             $hero_header = get_field('front_page_hero_title', 'options');
                             $hero_sub_header = get_field('front_page_hero_sub_title', 'options');
@@ -171,7 +178,13 @@
                             $hero_button1_lnk = get_field('contact_hero_button_one_link', 'options');
                             $hero_button2_text = get_field('contact_hero_button_two_text','options');
                             $hero_button2_lnk = get_field('contact_hero_button_two_link','options');
-                        }            
+                        }      
+                        elseif( is_search()){
+                            $hero_button1_text = get_field('search_button_1_text', 'options');
+                            $hero_button1_lnk = get_field('search_button_1_link', 'options');
+                            $hero_button2_text = get_field('search_button_2_text','options');
+                            $hero_button2_lnk = get_field('search_button_2_link','options');                            
+                        }      
                         else {
                             $hero_button1_text = get_field('contact_hero_button_one_text', 'options');
                             $hero_button1_lnk = get_field('contact_hero_button_one_link', 'options');

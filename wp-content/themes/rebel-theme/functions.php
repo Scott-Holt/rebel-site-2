@@ -87,3 +87,26 @@ if (function_exists('register_sidebar')) {
 
 
 
+////this function adds pagination output and specifically deteles entire button.
+
+function pagination_nav() {
+    global $wp_query;
+ 
+    if ( $wp_query->max_num_pages > 1) { ?>
+
+
+<nav class="pagination" role="navigation">
+        <?php if( get_previous_posts_link() ) { 
+		?>
+		
+        <div id="prv" class="button pag-btn nav-next"><?php previous_posts_link( 'Previous' ); ?></div>
+        <?php } 
+        if( get_next_posts_link() ) { ?>
+        <div id="nxt" class="button pag-btn nav-previous"><?php next_posts_link( 'Next' ); ?></div>
+        <?php } ?>
+    </nav>
+<?php }
+}
+
+
+
